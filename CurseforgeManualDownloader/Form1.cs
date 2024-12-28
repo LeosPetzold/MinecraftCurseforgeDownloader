@@ -116,7 +116,7 @@ namespace CurseforgeManualDownloader
                 }
                 else break;
             }
-            MessageBox.Show($"Mod downloading complete.\n{modFile.files.Count} mod(s) downloaded.", "Mod downloading done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Mod downloading complete.\n{progressBar1.Value} mod(s) downloaded out of {progressBar1.Maximum} defined.", "Mod downloading done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Application.Exit();
         }
         private List<Mod> TryDownloadFilesInitial(CurseForge.CurseForge client, List<Mod> mods, string directory)
@@ -128,7 +128,7 @@ namespace CurseforgeManualDownloader
                 if (result.success) progressBar1.Increment(1);
                 else failedMods.Add(mod);
                 label4.Text = result.downloadStatus;
-                if (result.errorStatus == string.Empty) label5.Text = result.errorStatus;
+                if (result.errorStatus != "") label5.Text = result.errorStatus;
                 progressBar2.Increment(1);
             }
             return failedMods;
@@ -142,7 +142,7 @@ namespace CurseforgeManualDownloader
                 if (result.success) progressBar1.Increment(1);
                 else failedMods.Add(mod);
                 label4.Text = result.downloadStatus;
-                if (result.errorStatus == string.Empty) label5.Text = result.errorStatus;
+                if (result.errorStatus != "") label5.Text = result.errorStatus;
             }
             return failedMods;
         }
@@ -205,8 +205,8 @@ namespace CurseforgeManualDownloader
     class TryDownloadFeedback
     {
         public bool success;
-        public string? downloadStatus;
-        public string? errorStatus;
+        public string? downloadStatus = "";
+        public string? errorStatus = "";
 
         /*public TryDownloadFeedback(bool success, string downloadStatus, string errorStatus)
             => (this.success, this.downloadStatus, this.errorStatus) = (success, downloadStatus, errorStatus);*/
