@@ -11,6 +11,9 @@ For some reason CurseForge API isn't that redundant, so there is a system for re
 If there is any problem then open up an issue and I'll probably get to it.
 The code doesn't check whether the mod file already exists in your selected mod folder.
 
+- The top (first) progressbar shows the total number of mods downloaded.
+- The bottom (second) progressbar shows the number of mods fetched during the first iteration of mod fetching.
+
 # Notes:
 This app only supports Minecraft.
 I have yet to even test if the downloaded mods are usable.
