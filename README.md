@@ -1,6 +1,7 @@
 # Usage
 Simply select your mods folder (Windows: ``%appdata%/.minecraft/mods``), your profile folder and fill in your CurseForge API key, which you can obtain in the [CurseForge for Studios](https://console.curseforge.com/#/api-keys) developer console after creating a CurseForge account.
-This Windows Forms application only downloads mods from manifest.json inside the .zip profile files, meaning that any manually added mods will not be copied over.
+This Windows Forms application only downloads mods from manifest.json inside the .zip profile files, meaning that any manually added mods will not be copied over.\
+I have supplied you a profile for testing, basically an old exported SkyFactory 4 profile.
 
 # Features and issues
 - Downloading Minecraft mods from the CurseForge database using the .zip profile file.
