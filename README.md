@@ -16,7 +16,7 @@ The code doesn't check whether the mod file already exists in your selected mod 
 
 # Help
 ### HTTP Forbitten (403)
-This is the error you get if you supply an invalid API key or CurseForge is updating/shutting down their interface. Example:
+This is the error you get if you supply an invalid API key or CurseForge is updating/shutting down their interface. Example: I have entered "pluh" as the API key, which is not valid:
 ![Invalid API error: HTTP 403 Forbitten](https://github.com/user-attachments/assets/aba261dc-17e2-459e-a7a2-1b658ad4bdb6)
 
 You can see the project ID and the file ID being displayed, because the code can't actually get any information about the mod from CurseForge, including the mod's name (which also isn't stored in the .json file, either and using the modlist.html file would possibly be overkill) in the format projectID:fileID which you can then paste into [CFLookup](https://cflookup.com/) to get information about the mod. You shouldn't need to because the application will most likely download the mod correctly in the second or third iteration of mod downloading (implemented due to the APIs non-redundant practices).\
